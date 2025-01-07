@@ -1,0 +1,19 @@
+{
+  "name": "bank-account",
+  "version": "1.0.0",
+  "description": "A smart contract that allows for creating joint bank accounts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "chai": "^5.1.2",
+    "chai-as-promised": "^8.0.1",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.22.17"
+  }
+}

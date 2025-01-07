@@ -1,0 +1,36 @@
+// Errors and test failure log
+
+1. Underflow error {
+    Error message: {
+        Error: VM Exception while processing transaction: reverted with panic code 0x11 
+        (Arithmetic operation overflowed outside of an unchecked block)
+    }
+    Where: {
+        BankAccount.validOwners (contracts/BankAccount.sol:65),
+        BankAccount.createAccount (contracts/BankAccount.sol:128)
+    }
+    Reason: {
+        for loop control variables are of type uint. When the arrat size is zero, the comparison
+        of uint variable with array.size() - 1 i.e. -1, a negative number, results in underflow
+        error.
+    }
+    fixed: { 
+        Yes
+    }
+}
+
+2. Error with Chai Matchers {
+    Error message: {
+        Error: Invalid Chai property: reverted
+    }
+    Where : {
+        BANK-ACCOUNT\test\BankAccount.js:80:131
+    }
+    Reason: {
+        Not having Chai-as-Promised or Chai Matchers for Ethers setup correctly
+    }
+    fixed: {
+        Yes
+    }
+}
+    
